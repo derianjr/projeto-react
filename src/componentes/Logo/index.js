@@ -8,6 +8,7 @@ const Logos = styled.div`
     margin-right: 30px;
     font-size: 30px;
     font-weight: bolder;
+    color:#FFFFFF ;  
 `
 
 export default function Logo(){

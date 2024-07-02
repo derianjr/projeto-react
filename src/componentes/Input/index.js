@@ -7,12 +7,12 @@ const Input = styled.input`
     padding: 20px 140px;
     border-radius: 50px;
     width: 200px;
-    color: #FFF;
+    color: #FFFFFF;
     font-size: 16px;
     margin-bottom: 10px;
 
     $::placeholder{
-      color: white;
+      color: #FFFFFF;
       font-size: 10px;
   }
 `

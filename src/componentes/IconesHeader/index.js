@@ -4,7 +4,7 @@ import sacola from '../../imagens/sacola.svg'
 import styled from 'styled-components'
 
 const Icone = styled.li`
-    margin-right: 40px;
+  margin-right: 40px;
   width: 25px;
 `
 const Icones = styled.ul`

@@ -12,6 +12,7 @@ const Opcao = styled.li`
     min-width: 120px;
     cursor: pointer;
     padding: 0 5px;
+    font-weight: bolder;
 `
 const textoOpcoes = ['CATEGORIAS', 'ESTANTE', 'FAVORITOS']
 
