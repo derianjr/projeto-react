@@ -1,15 +1,16 @@
 import styled from "styled-components"
 import Input from '../Input'
 import { useState } from "react"
+import { livros } from '../Pesquisa/dadosPesquisas'
 
 
 const Pesquisas = styled.section`
     background-color: black;
-    color: #000;
+    color: #FFFFFF;
     text-align: center;
     padding: 85px 0;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
 `
 const Titulo = styled.h2`
     color: #FFF;
@@ -24,16 +25,27 @@ const SubTitulo = styled.h3`
   color: #FFFFFF;
 `
 export default function Pesquisa() {
-  const [textoDigitado, settextoDigitado] = useState('')
+  const [livrosPesquisados, setlivrosPesquisados ]= useState([])
+  console.log(livrosPesquisados)
+
   return(
     <Pesquisas>
       <Titulo>Ja sabe por onde começar?</Titulo>
-      <SubTitulo>Encontre seu livro em nossa estante</SubTitulo>
+      <SubTitulo>Encontre seus livros em nossa estante</SubTitulo>
       <Input
         placeholder="Escreva sua proxima leitura"
-        onBlur={evento => settextoDigitado(evento.target.value) }
-
+        onBlur={evento => {
+          const textoDigitado = evento.target.value
+          const resultadoPesquisa = livros.filter(livro => livro.nome.includes(textoDigitado))
+          setlivrosPesquisados(resultadoPesquisa)
+        }}
       />
+      { livrosPesquisados.map( livro => (
+        <div>
+          <p>{livro.nome}</p>
+          <img src={livro.src}/>
+        </div>
+    )  ) }
     </Pesquisas>
   )
 }
