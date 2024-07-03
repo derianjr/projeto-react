@@ -30,6 +30,7 @@ const Resultado = styled.div`
     align-items: center;
     margin-bottom: 20px;
     cursor: pointer;
+    margin: 20px;
     p {
         width: 200px;
     }
@@ -48,7 +49,7 @@ export default function Pesquisa() {
   return(
     <Pesquisas>
       <Titulo>Ja sabe por onde começar?</Titulo>
-      <SubTitulo>Encontre seus livros em nossa estante</SubTitulo>
+        <SubTitulo>Encontre seus livros em nossa estante</SubTitulo>
       <Input
         placeholder="Escreva sua proxima leitura"
         onBlur={evento => {
