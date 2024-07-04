@@ -11,7 +11,6 @@ const Icones = styled.ul`
   display: flex;
   align-items: center;
 `
-
 const icones = [perfil, sacola]
 export default function IconesHeader() {
   return (
